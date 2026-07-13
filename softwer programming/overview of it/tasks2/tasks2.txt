@@ -1,0 +1,96 @@
+
+
+1. Install GCC and verify the installation by running gcc --version in your terminal or command prompt.
+
+Open Command Prompt (Windows) or Terminal (Linux/Mac) and run:
+
+bash
+gcc --version
+
+
+**Expected Output (Example):**
+
+```text
+gcc (MinGW-W64) 14.2.0
+Copyright (C) Free Software Foundation, Inc.
+...
+```
+
+If the version is displayed, GCC has been installed successfully.
+
+---
+
+2.Open VS Code or DevC++ and create a new file named hello.c. Write a C program that prints 'Hello, Instagram World!' to the console.
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello, Instagram World!\n");
+    return 0;
+}
+```
+
+---
+
+3.Identify and label the header, main function, and return statement in your hello.c program using comments.
+
+```c
+// Header File
+#include <stdio.h>
+
+// Main Function
+int main()
+{
+    printf("Hello, Instagram World!\n");
+
+    // Return Statement
+    return 0;
+}
+```
+
+---
+
+4.Compile your hello.c file using the GCC command line (gcc hello.c -o hello) and run the output file to display the message in your terminal.
+  <br><br><em><strong>Hint:</strong> On Windows, the output file will be hello.exe; on Linux/Mac, it will be hello.</em>
+
+### Step 1: Open Command Prompt or Terminal.
+
+### Step 2: Go to the folder where `hello.c` is saved.
+
+Example:
+
+```bash
+cd C:\Users\YourName\Documents
+```
+
+### Step 3: Compile the program.
+
+```bash
+gcc hello.c -o hello
+```
+
+### Step 4: Run the program.
+
+**Windows:**
+
+```bash
+hello
+```
+
+or
+
+```bash
+hello.exe
+```
+
+**Linux / macOS:**
+
+bash
+./hello
+
+
+Output:
+Hello, Instagram World!
+

@@ -1,0 +1,129 @@
+## 1.Write a program that prints the numbers from 10 down to 1 using a for loop, similar to a countdown timer.
+
+#include<stdio.h>
+
+void main(){
+    int i;
+    for(i=10;i>=1;i--){
+        printf("%d\n",i);
+    }
+                                                                                                                                                                                                                     
+}
+
+**Output:**
+
+```
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+```
+
+---
+
+## 2.Create a menu-driven console app that lets the user: 1) View your favorite 3 IPL teams, 2) Add a new team, 3) Exit. Use a while loop to keep showing the menu until the user chooses Exit.
+     <br><br><em><strong>Hint:</strong> Use input() (or Scanner in Java) to get the user's choice each time.</em>
+
+let teams = ["Gujarat titans", "Chennai Super Kings", "Royal Challengers Bengaluru"];
+let choice = 0;
+
+while (choice !== 3) {
+
+    choice = Number(prompt(
+        "===== MENU =====\n" +
+        "1. View Favorite IPL Teams\n" +
+        "2. Add New Team\n" +
+        "3. Exit\n\n" +
+        "Enter your choice:"
+    ));
+
+    switch (choice) {
+
+        case 1:
+            console.log("Favorite IPL Teams:");
+            for (let i = 0; i < teams.length; i++) {
+                console.log((i + 1) + ". " + teams[i]);
+            }
+            break;
+
+        case 2:
+            let newTeam = prompt("Enter New Team Name:");
+            teams.push(newTeam);
+            console.log("Team Added Successfully!");
+            break;
+
+        case 3:
+            console.log("Thank You! Exiting...");
+            break;
+
+        default:
+            console.log("Invalid Choice!");
+    }
+}
+```
+
+---
+
+## 3. Build a 'Guess the Song' game like Spotify — the program randomly picks a song name from a list and asks the user to guess it.
+      Use a do-while loop so the user can keep guessing until they get it right.<br><br><em><strong>Constraint:</strong> Use at least 3 song names of your choice.</em>
+
+let songs = ["Believer", "Shape of You", "Perfect"];
+
+let randomSong = songs[Math.floor(Math.random() * songs.length)];
+
+let guess;
+
+do {
+    guess = prompt("Guess the Song:");
+
+    if (guess === randomSong) {
+        console.log("Correct! You guessed the song.");
+    } else {
+        console.log("Wrong Guess! Try Again.");
+    }
+
+} while (guess !== randomSong);
+```
+
+---
+
+## 4.Explain with your own example the difference between entry-controlled and exit-controlled loops by writing a short code snippet for each (for/while vs do-while) and describing what happens if the loop condition is false at the start.
+
+ Entry-Controlled Loop (while)
+
+```javascript
+let x = 5;
+
+while (x < 5) {
+    console.log("Hello");
+}
+```
+
+**Explanation:**
+The condition (`x < 5`) is checked **before** entering the loop. Since it is **false**, the loop body does **not execute even once**.
+
+---
+
+### Exit-Controlled Loop (do-while)
+
+```javascript
+let y = 5;
+
+do {
+    console.log("Hello");
+} while (y < 5);
+```
+
+**Explanation:**
+The loop body executes **once first**, and then the condition is checked. Even though the condition is **false**, `"Hello"` is printed **one time**.
+
+### Difference
+
+* **Entry-Controlled Loops (`for`, `while`)** check the condition **before** executing the loop body. If the condition is false initially, the loop does not run.
+* **Exit-Controlled Loops (`do-while`)** check the condition **after** executing the loop body, so the loop always runs **at least once**.

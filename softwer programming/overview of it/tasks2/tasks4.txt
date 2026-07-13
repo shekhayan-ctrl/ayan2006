@@ -1,0 +1,119 @@
+
+
+## 1.Create a simple JavaScript function called calculateTotal that takes two numbers: itemPrice and quantity, and returns the total bill amount using arithmetic operators.
+
+```javascript
+function calculateTotal(itemPrice, quantity) {
+    return itemPrice * quantity;
+}
+
+// Example
+let total = calculateTotal(250, 3);
+console.log("Total Bill Amount:", total);
+```
+
+**Output:**
+
+```
+Total Bill Amount: 750
+```
+
+---
+
+## 2.Build a Flipkart-style discount calculator: given product price, discount percentage, and a boolean isMember, use arithmetic and logical operators to calculate the final price (apply an extra 5% off if isMember is true).
+
+```javascript
+function calculateFinalPrice(productPrice, discountPercentage, isMember) {
+
+    let discountAmount = productPrice * discountPercentage / 100;
+    let finalPrice = productPrice - discountAmount;
+
+    if (isMember) {
+        finalPrice = finalPrice - (finalPrice * 5 / 100);
+    }
+
+    return finalPrice;
+}
+
+// Example
+let price = calculateFinalPrice(2000, 20, true);
+console.log("Final Price:", price);
+```
+
+**Output:**
+
+```
+Final Price: 1520
+```
+
+---
+
+## 3.Write a function isEligibleForOffer that takes a user's age and total order value, and returns true if the user is 18 or older AND the order value is above 500, otherwise false.<br><br><em><strong>Hint:</strong> Use relational and logical operators together.</em>
+
+```javascript
+function isEligibleForOffer(age, totalOrderValue) {
+    return age >= 18 && totalOrderValue > 500;
+}
+
+// Examples
+console.log(isEligibleForOffer(20, 700)); // true
+console.log(isEligibleForOffer(16, 700)); // false
+console.log(isEligibleForOffer(22, 400)); // false
+```
+
+---
+
+## 4. Given three variables: likes, comments, and shares (all numbers), write code to check if a post is 'trending' on Instagram (at least 1000 likes OR more than 200 comments AND at least 50 shares). Print the result.
+
+**Condition:**
+
+* At least **1000 likes**
+* **OR**
+* More than **200 comments** **AND** at least **50 shares**
+
+```javascript
+let likes = 850;
+let comments = 250;
+let shares = 60;
+
+let trending = (likes >= 1000) || (comments > 200 && shares >= 50);
+
+console.log("Is the post trending?", trending);
+```
+
+**Output:**
+
+```
+Is the post trending? true
+```
+
+---
+
+## 5.Write a code snippet that demonstrates the difference between pre-increment (++count) and post-increment (count++) by logging the values before and after using both on a followerCount variable.
+
+```javascript
+let followerCount = 100;
+
+console.log("Initial Value:", followerCount);
+
+console.log("Post-increment:", followerCount++);
+console.log("After Post-increment:", followerCount);
+
+console.log("Pre-increment:", ++followerCount);
+console.log("After Pre-increment:", followerCount);
+```
+
+**Output:**
+
+```
+Initial Value: 100
+Post-increment: 100
+After Post-increment: 101
+Pre-increment: 102
+After Pre-increment: 102
+```
+
+### Difference
+
+* **Post-increment (`count++`)**: Uses the current value first, then increases it by 1.
+* **Pre-increment (`++count`)**: Increases the value first, then uses the updated value.

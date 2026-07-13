@@ -1,0 +1,182 @@
+## 1.Declare a structure named Playlist to store details of a song: title (string), artist (string), and duration in seconds (integer). Initialize one Playlist variable with your favorite song's details and print each field.
+
+
+```c
+#include <stdio.h>
+
+struct Playlist
+{
+    char title[50];
+    char artist[50];
+    int duration;
+};
+
+int main()
+{
+    struct Playlist song = {"Tum Hi Ho", "Arijit Singh", 262};
+
+    printf("Song Title : %s\n", song.title);
+    printf("Artist     : %s\n", song.artist);
+    printf("Duration   : %d seconds\n", song.duration);
+
+    return 0;
+}
+```
+
+**Output:**
+
+```text
+Song Title : Tum Hi Ho
+Artist     : Arijit Singh
+Duration   : 262 seconds
+```
+
+---
+
+## 2.Create a structure called FoodItem to store Zomato-style menu data: itemName (string), price (float), and rating (float). Initialize an array of 3 FoodItem variables with real menu items and display their details using a loop.
+
+
+```c
+#include <stdio.h>
+
+struct FoodItem
+{
+    char itemName[50];
+    float price;
+    float rating;
+};
+
+int main()
+{
+    struct FoodItem menu[3] =
+    {
+        {"Paneer Biryani", 249.00, 4.5},
+        {"Masala Dosa", 120.00, 4.3},
+        {"Veg Pizza", 399.00, 4.7}
+    };
+
+    printf("Zomato Menu\n\n");
+
+    for(int i = 0; i < 3; i++)
+    {
+        printf("Item %d\n", i + 1);
+        printf("Name   : %s\n", menu[i].itemName);
+        printf("Price  : ₹%.2f\n", menu[i].price);
+        printf("Rating : %.1f\n\n", menu[i].rating);
+    }
+
+    return 0;
+}
+```
+
+**Output:**
+
+```text
+Item 1
+Name   : Paneer Biryani
+Price  : ₹249.00
+Rating : 4.5
+
+Item 2
+Name   : Masala Dosa
+Price  : ₹120.00
+Rating : 4.3
+
+Item 3
+Name   : Veg Pizza
+Price  : ₹399.00
+Rating : 4.7
+```
+
+---
+
+## 3.Define a nested structure called MovieShow for a BookMyShow-style app: Movie (string), Screen (integer), and a nested structure Time with hours and minutes (integers). Create and initialize a MovieShow variable for any movie and print its details in the format 'Movie: X, Screen: Y, Time: HH:MM'.
+
+
+```c
+#include <stdio.h>
+
+struct Time
+{
+    int hours;
+    int minutes;
+};
+
+struct MovieShow
+{
+    char movie[50];
+    int screen;
+    struct Time showTime;
+};
+
+int main()
+{
+    struct MovieShow show = {"Saiyaara", 3, {7, 30}};
+
+    printf("Movie: %s, Screen: %d, Time: %02d:%02d\n",
+           show.movie,
+           show.screen,
+           show.showTime.hours,
+           show.showTime.minutes);
+
+    return 0;
+}
+```
+
+**Output:**
+
+```text
+Movie: Saiyaara, Screen: 3, Time: 07:30
+```
+
+---
+
+## 4.Build a structure called InstaProfile with fields: username (string), followers (integer), and a nested structure Bio with fields: description (string) and age (integer). Initialize an InstaProfile variable with your own details and display all fields.
+
+
+```c
+#include <stdio.h>
+
+struct Bio
+{
+    char description[100];
+    int age;
+};
+
+struct InstaProfile
+{
+    char username[50];
+    int followers;
+    struct Bio bio;
+};
+
+int main()
+{
+    struct InstaProfile profile =
+    {
+        "ayan_shekh",
+        2500,
+        {"BSc IT Student | C Programmer", 22}
+    };
+
+    printf("Instagram Profile\n");
+    printf("-----------------\n");
+    printf("Username    : %s\n", profile.username);
+    printf("Followers   : %d\n", profile.followers);
+    printf("Description : %s\n", profile.bio.description);
+    printf("Age         : %d\n", profile.bio.age);
+
+    return 0;
+}
+```
+
+**Output:**
+
+```text
+Instagram Profile
+-----------------
+Username    : ayan_shekh
+Followers   : 2500
+Description : BSc IT Student | C Programmer
+Age         : 22
+```

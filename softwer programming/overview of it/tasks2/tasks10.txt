@@ -1,0 +1,145 @@
+
+
+
+
+
+
+## 1.Declare a string variable called songTitle and assign it the value 'Tum Hi Ho'. Print the length of the string using strlen().
+
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char songTitle[] = "Tum Hi Ho";
+
+    printf("Song Title: %s\n", songTitle);
+    printf("Length: %lu\n", strlen(songTitle));
+
+    return 0;
+}
+```
+
+**Output:**
+
+```text
+Song Title: Tum Hi Ho
+Length: 9
+```
+
+---
+
+## 2.Take input for two usernames (as strings) and compare them using strcmp(). Display whether they are the same or different.
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char username1[50], username2[50];
+
+    printf("Enter First Username: ");
+    scanf("%s", username1);
+
+    printf("Enter Second Username: ");
+    scanf("%s", username2);
+
+    if (strcmp(username1, username2) == 0)
+    {
+        printf("Both usernames are the same.\n");
+    }
+    else
+    {
+        printf("Usernames are different.\n");
+    }
+
+    return 0;
+}
+```
+
+**Example Output:**
+
+```text
+Enter First Username: virat18
+Enter Second Username: virat18
+Both usernames are the same.
+```
+
+---
+
+## 3.Copy the string 'Flipkart' into another string variable called shoppingApp using strcpy(), then print the value of shoppingApp.<br><br><em><strong>Hint:</strong> Make sure to declare enough space for the destination string.</em>
+
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char shoppingApp[20];
+
+    strcpy(shoppingApp, "Flipkart");
+
+    printf("Shopping App: %s\n", shoppingApp);
+
+    return 0;
+}
+```
+
+**Output:**
+
+```text
+Shopping App: Flipkart
+```
+
+---
+
+## 4.Build a small script that takes the user's full name as input and creates a username by copying only the first 5 characters using strcpy(). Print the generated username.<br><br><em><strong>Constraint:</strong> If the name is shorter than 5 characters, use the full name as the username.</em>
+
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char fullName[100];
+    char username[6];
+
+    printf("Enter Full Name: ");
+    fgets(fullName, sizeof(fullName), stdin);
+
+    // Remove newline character if present
+    fullName[strcspn(fullName, "\n")] = '\0';
+
+    if (strlen(fullName) <= 5)
+    {
+        strcpy(username, fullName);
+    }
+    else
+    {
+        strncpy(username, fullName, 5);
+        username[5] = '\0';
+    }
+
+    printf("Generated Username: %s\n", username);
+
+    return 0;
+}
+```
+
+**Example Output 1:**
+
+```text
+Enter Full Name: Virat Kohli
+Generated Username: Virat
+```
+
+**Example Output 2:**
+
+```text
+Enter Full Name: Ram
+Generated Username: Ram
+```
