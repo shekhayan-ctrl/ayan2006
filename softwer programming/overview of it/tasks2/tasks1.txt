@@ -1,0 +1,82 @@
+
+1. What is a Program? Give one real-life example.
+
+A program is a set of instructions written in a programming language that tells a computer what to do.
+It helps the computer perform specific tasks automatically. 
+We use programs every day in mobile apps, websites, and computer software.
+
+Example:When I use Instagram,the program allows me to log in, view posts, like photos, upload stories, and send messages.
+
+
+
+2. List three popular programming languages and mention whether each is compiled, interpreted, or both.
+
+| Programming Language | Type                                                   |
+| -------------------- | ------------------------------------------------------ |
+| Java                 | Both (Compiled to Bytecode and Interpreted by the JVM) |
+| Python               | Interpreted                                            |
+| JavaScript           | Interpreted (Executed by a JavaScript Engine)          |
+
+
+3. Flowchart for Booking a Movie Ticket on BookMyShow
+
+Start
+   │
+   ▼
+Open BookMyShow App
+   │
+   ▼
+Login / Sign Up
+   │
+   ▼
+Select City
+   │
+   ▼
+Choose Movie
+   │
+   ▼
+Select Date & Time
+   │
+   ▼
+Choose Cinema
+   │
+   ▼
+Select Seats
+   │
+   ▼
+Proceed to Payment
+   │
+   ▼
+Choose Payment Method
+   │
+   ▼
+Make Payment
+   │
+   ▼
+Booking Confirmed
+   │
+   ▼
+Receive Ticket & Confirmation
+   │
+   ▼
+End
+
+
+
+4. Algorithm for Ordering Food on Swiggy
+
+1. Start.
+2. Open the Swiggy app.
+3. Log in to your account.
+4. Enter or confirm your delivery location.
+5. Search for a restaurant.
+6. Select the restaurant.
+7. Choose the food items you want.
+8. Add the items to the cart.
+9. Review the cart and click **Proceed to Checkout**.
+10. Select the delivery address.
+11. Choose a payment method (UPI, Card, Net Banking, or Cash on Delivery).
+12. Complete the payment.
+13. Receive the order confirmation.
+14. Track the order until it is delivered.
+15. End.
