@@ -1,0 +1,23 @@
+1.Install GCC on your computer and verify the installation by running gcc --version in your terminal or command prompt.
+
+ follow these steps:
+
+ Step 1: Install GCC
+1. Download and install MinGW-w64 or MSYS2(both include GCC).
+2. During installation, make sure GCC is selected.
+3. Add the GCC bin folder to your system's PATH environment variable.
+
+ Step 2: Verify the Installation
+
+Open Command Prompt,PowerShell,or Terminal and run:
+
+gcc --version
+
+ If you get an error like:
+
+'gcc' is not recognized as an internal or external command
+
+ The GCC bin folder has added to your PATH
+
+
+
